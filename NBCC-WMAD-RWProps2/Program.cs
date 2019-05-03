@@ -72,11 +72,11 @@ namespace NBCC_WMAD_Console
 
             Out.P($"I have a car count in my list of: {myCars.Count}");
 
-            Out.P("Do you want to list all cars y/n");
+            //Out.P("Do you want to list all cars y/n");
 
-            if(question == "y")
+            if(question.ToLower() == "y")
             {
-                foreach (var item in myCars)
+                foreach (car  item in myCars)
                 {
                     Out.P($"Car type: {item.CarType} Numb of doors: {item.NumberOfDoors} Speed: {item.Speed} Price: {item.Price.GetValueOrDefault().ToString("c")} \n");
                 }
